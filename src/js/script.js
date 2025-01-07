@@ -9,3 +9,7 @@ function open_fullscreen() {
     } else if (elem.msRequestFullscreen) { /* IE/Edge */
         elem.msRequestFullscreen();
     }
+}
+    document.addEventListener('DOMContentLoaded', () => {
+        console.log('404 Page Loaded');
+    });
