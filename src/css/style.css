@@ -32,16 +32,22 @@ body {
 
 .container {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Tipografia */
 h1, h2, h3, h4, h5, h6 {
     color: var(--title-color); /* Títulos com a cor definida */
     margin: 0 0 10px;
+    text-align: center;
 }
 
 p {
     color: var(--text-color); /* Texto geral branco */
+    text-align: justify;
 }
 
 a {
@@ -74,14 +80,16 @@ button:hover {
 .card {
     background-color: var(--analogous-light);
     color: var(--text-color);
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    text-align: center;
 }
 
 .card-title {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: var(--title-color); /* Títulos em cartões */
     margin-top: 10px;
 }
@@ -89,7 +97,20 @@ button:hover {
 .card img {
     max-width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Transição para o efeito de zoom */
+}
+
+/* Efeito de zoom para imagens com a classe img-fluid */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Bordas arredondadas */
+    transition: transform 0.3s ease; /* Transição para o efeito de zoom */
+}
+
+.img-fluid:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
 }
 
 /* Responsividade de Vídeos */
@@ -122,16 +143,18 @@ button:hover {
 .highlight {
     background-color: var(--triadic-bright);
     color: var(--primary-color);
-    padding: 10px;
+    padding: 15px;
     border-radius: 5px;
     font-weight: bold;
     margin: 15px 0;
+    text-align: center;
 }
 
 /* Cabeçalho */
 header {
     background-color: var(--analogous-dark);
-    padding: 15px;
+    padding: 20px;
+    text-align: center;
 }
 
 header h1 {
